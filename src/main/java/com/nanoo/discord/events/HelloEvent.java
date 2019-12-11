@@ -1,8 +1,10 @@
 package com.nanoo.discord.events;
 
-import com.nanoo.discord.config.DiscordConfig;
+import com.nanoo.discord.config.Bot;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+
+import javax.annotation.Nonnull;
 
 /**
  * @author nanoo
@@ -13,23 +15,20 @@ public class HelloEvent extends ListenerAdapter {
     /**
      * This method listen to all message send on guild and respond to specific content.
      *
-     * @param messageEvent message event on guild server
+     * @param event message event on guild server
      */
     @Override
-    public void onGuildMessageReceived (GuildMessageReceivedEvent messageEvent){
-        int i;
-        int j;
-    
-        String[] messageReceived = messageEvent.getMessage().getContentRaw().split(" ");
-        String messageReceivedAuthor = messageEvent.getAuthor().getName();
+    public void onGuildMessageReceived (@Nonnull GuildMessageReceivedEvent event){
         
-        if (!messageReceivedAuthor.equalsIgnoreCase(DiscordConfig.BOT_NAME)){
-            for ( i=0 , j=messageReceived.length ; i<j ; i++ ){
+        String[] messageReceived = event.getMessage().getContentRaw().split(" ");
+        String messageReceivedAuthor = event.getAuthor().getName();
         
-                if (messageReceived[i].equalsIgnoreCase("hello")){
-                    messageEvent.getChannel().sendMessage("Hi there ! La forme " + messageReceivedAuthor + " ? :)").queue();
-                }else if (messageReceived[i].equalsIgnoreCase("salut")){
-                    messageEvent.getChannel().sendMessage("Salut à toi aussi ! Comment tu vas " + messageEvent.getAuthor().getName() + " aujourd'hui ?").queue();
+        if (!messageReceivedAuthor.equalsIgnoreCase(Bot.BOT_NAME)){
+            for (String s : messageReceived) {
+                if (s.equalsIgnoreCase("hello")) {
+                    event.getChannel().sendMessage("Hi there ! La forme " + messageReceivedAuthor + " ? :)").queue();
+                } else if (s.equalsIgnoreCase("salut")) {
+                    event.getChannel().sendMessage("Salut à toi aussi ! Comment tu vas " + event.getAuthor().getName() + " aujourd'hui ?").queue();
                 }
             }
         }
