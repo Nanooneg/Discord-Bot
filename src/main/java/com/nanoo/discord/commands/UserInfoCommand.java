@@ -9,7 +9,6 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import javax.annotation.Nonnull;
 import java.awt.*;
-import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
@@ -58,6 +57,7 @@ public class UserInfoCommand extends ListenerAdapter {
                     embedBuilder.setColor(Color.YELLOW);
                     embedBuilder.setFooter("Requête effectué par " + requestUser , requestUserIconUrl);
                     
+                    event.getMessage().delete().queue(); // delete message ( embed content has user signature in footer anyway )
                     event.getChannel().sendMessage(embedBuilder.build()).queue();
                 }catch (Exception e){
                     System.out.println(e.getMessage());

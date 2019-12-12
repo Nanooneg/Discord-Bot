@@ -6,6 +6,8 @@ import com.nanoo.discord.commands.UserInfoCommand;
 import com.nanoo.discord.config.Bot;
 import com.nanoo.discord.events.CategoryCreate;
 import com.nanoo.discord.events.HelloEvent;
+import com.nanoo.discord.filters.CoffeeFilter;
+import com.nanoo.discord.filters.CoffeeFilterToggle;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 
@@ -27,7 +29,9 @@ public class AppMain {
                              new CategoryCreate(),     // send message on category created event
                              new CalculateCommand(),   // make basic calculation
                              new InviteCommand(),      // create invitation to server
-                             new UserInfoCommand());   // gives info on some user
+                             new UserInfoCommand(),    // gives info on some user
+                             new CoffeeFilterToggle(), // toggle coffe filter
+                             new CoffeeFilter());      // filter for coffee word
         
         
     }

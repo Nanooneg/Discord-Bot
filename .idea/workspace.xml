@@ -6,8 +6,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/AppMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/UserInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/UserInfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/utils/EmbedBuilderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/utils/EmbedBuilderUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Command.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +47,9 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.nanoo.discord.filters" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/images" />
     </key>
@@ -95,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576087756535</updated>
       <workItem from="1576087758937" duration="31502000" />
-      <workItem from="1576161983512" duration="805000" />
+      <workItem from="1576161983512" duration="3325000" />
     </task>
     <servers />
   </component>
