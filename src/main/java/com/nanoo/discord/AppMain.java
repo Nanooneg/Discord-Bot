@@ -18,9 +18,9 @@ import javax.security.auth.login.LoginException;
 public class AppMain {
     
     public static void main(String[] args) throws LoginException {
-    
+        
         /* Bot creation with token given on discord dev dashboard */
-        JDA jda = new JDABuilder(Bot.BOT_TOKEN).build();
+        JDA jda = new JDABuilder(Bot.getToken()).build();
         
         /* Add some Event listener to the bot */
         jda.addEventListener(new HelloEvent(),         // respond to "hello" messages

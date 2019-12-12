@@ -4,11 +4,10 @@
     <list default="true" id="576693e5-c99d-4f38-950f-1f23ce12f3ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/AppMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/CalculateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/UserInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/UserInfoCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/utils/EmbedBuilderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/utils/EmbedBuilderUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +94,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576087756535</updated>
-      <workItem from="1576087758937" duration="27212000" />
+      <workItem from="1576087758937" duration="31502000" />
+      <workItem from="1576161983512" duration="805000" />
     </task>
     <servers />
   </component>
@@ -107,7 +107,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

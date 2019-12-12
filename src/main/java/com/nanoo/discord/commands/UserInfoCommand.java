@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import javax.annotation.Nonnull;
+import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -28,8 +29,11 @@ public class UserInfoCommand extends ListenerAdapter {
         if(messageReceived[0].equalsIgnoreCase(Command.COMMAND_USER_INFO)){
     
             /* Static values */
+            String requestUser = event.getAuthor().getName();
+            String requestUserIconUrl = event.getAuthor().getAvatarUrl();
+            
             String embedTitle = "Infos utilisateur";
-            String thumbnailUrl = "https://spyshoproundrock.com/wp-content/uploads/2019/07/Spy_Shop_Logo.png";
+            String embedThumbnailUrl = "https://spyshoproundrock.com/wp-content/uploads/2019/07/Spy_Shop_Logo.png";
     
             /* Static values = messages */
             String messageErrorCommand = "Hey le vicieux !! Faut être précis quand on veux faire la fouine :wink:";
@@ -47,7 +51,13 @@ public class UserInfoCommand extends ListenerAdapter {
                 try{
                     User user = event.getGuild().getMembersByName(name,true).get(0).getUser();
                     /* generate embed content */
-                    EmbedBuilder embedBuilder = embedBuilderUtils.build(embedTitle, getUserInfos(user), thumbnailUrl);
+                    EmbedBuilder embedBuilder = embedBuilderUtils.buildAndFillFields(getUserInfos(user));
+                    /* Add static values in embed object */
+                    embedBuilder.setTitle(embedTitle);
+                    embedBuilder.setThumbnail(embedThumbnailUrl);
+                    embedBuilder.setColor(Color.YELLOW);
+                    embedBuilder.setFooter("Requête effectué par " + requestUser , requestUserIconUrl);
+                    
                     event.getChannel().sendMessage(embedBuilder.build()).queue();
                 }catch (Exception e){
                     System.out.println(e.getMessage());
@@ -74,7 +84,7 @@ public class UserInfoCommand extends ListenerAdapter {
         /* Values from original demand */
         String nameValue = user.getName();
         String tagValue = user.getAsTag();
-        String createdValue = user.getTimeCreated().format(DateTimeFormatter.ISO_LOCAL_DATE);
+        String createdValue = user.getTimeCreated().format(DateTimeFormatter.ofPattern("dd MMM yyyy"));
         
         /* Add fields names and values */
         fields.put(createdField,createdValue);

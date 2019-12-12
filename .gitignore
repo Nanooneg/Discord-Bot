@@ -19,3 +19,6 @@ target/
 *.iws
 *.iml
 *.ipr
+
+### TOKEN ###
+discord-config.properties

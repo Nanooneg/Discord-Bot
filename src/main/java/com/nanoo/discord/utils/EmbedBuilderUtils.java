@@ -11,17 +11,10 @@ import java.util.Map;
  */
 public class EmbedBuilderUtils {
     
-    public EmbedBuilder build (String embedTitle, Map<String,String> fields, String thumbnail){
+    public EmbedBuilder buildAndFillFields (Map<String,String> fields){
     
         EmbedBuilder embedBuilder = new EmbedBuilder();
-        
-        /* Add title */
-        embedBuilder.setTitle(embedTitle);
-        /* Add color */
-        embedBuilder.setColor(Color.YELLOW); // TODO add some random color selection maybe
-        /* Add thumbnail */
-        if (thumbnail.length() > 0)
-            embedBuilder.setThumbnail(thumbnail);
+
         /* Add fields */
         for (Map.Entry<String,String> entry : fields.entrySet()){
     
