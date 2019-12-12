@@ -8,7 +8,7 @@ public class Bot {
     
     private Bot() {}
     
-    public static final String BOT_TOKEN = "NjU0MzgyMDY5NTUxNTk1NTMw.XfF7eg.uVGj5-ZW0p4vLVv9ptd7rmoWn0A";
+    public static final String BOT_TOKEN = "NjU0MzgyMDY5NTUxNTk1NTMw.XfH_hg.80Aq780999uJW4xuOVWsEGNUiNU";
     public static final String BOT_NAME = "Virus";
     
 }

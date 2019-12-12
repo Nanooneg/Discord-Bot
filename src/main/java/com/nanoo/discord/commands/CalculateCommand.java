@@ -10,7 +10,7 @@ import javax.annotation.Nonnull;
  * @author nanoo
  * @create 11/12/2019 - 22:58
  */
-public class Calculate extends ListenerAdapter {
+public class CalculateCommand extends ListenerAdapter {
     
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
@@ -21,7 +21,7 @@ public class Calculate extends ListenerAdapter {
     
             String messageError = "mauvais format de calcul mon pote !";
             String messageExplication = "Pour utiliser la calculatrice, tape !calculate puis ton opération " +
-                                        "en séparant les chiffres et le signe par un espace comme ça ==> ex : 5 + 3";
+                                        "en séparant les chiffres et le signe par un espace comme ça : \" !calculate 5 + 3 \" ";
             
             if (messageReceived.length == 1){
                 event.getChannel().sendMessage(messageExplication).queue();

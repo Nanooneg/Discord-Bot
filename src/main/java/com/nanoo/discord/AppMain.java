@@ -1,6 +1,8 @@
 package com.nanoo.discord;
 
-import com.nanoo.discord.commands.Calculate;
+import com.nanoo.discord.commands.CalculateCommand;
+import com.nanoo.discord.commands.InviteCommand;
+import com.nanoo.discord.commands.UserInfoCommand;
 import com.nanoo.discord.config.Bot;
 import com.nanoo.discord.events.CategoryCreate;
 import com.nanoo.discord.events.HelloEvent;
@@ -23,7 +25,9 @@ public class AppMain {
         /* Add some Event listener to the bot */
         jda.addEventListener(new HelloEvent(),         // respond to "hello" messages
                              new CategoryCreate(),     // send message on category created event
-                             new Calculate());         // make basic calculation
+                             new CalculateCommand(),   // make basic calculation
+                             new InviteCommand(),      // create invitation to server
+                             new UserInfoCommand());   // gives info on some user
         
         
     }
