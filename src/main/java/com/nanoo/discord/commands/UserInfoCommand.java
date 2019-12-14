@@ -55,7 +55,7 @@ public class UserInfoCommand extends ListenerAdapter {
                     embedBuilder.setTitle(embedTitle);
                     embedBuilder.setThumbnail(embedThumbnailUrl);
                     embedBuilder.setColor(Color.YELLOW);
-                    embedBuilder.setFooter("Requête effectué par " + requestUser , requestUserIconUrl);
+                    embedBuilder.setFooter("Requête effectuée par " + requestUser , requestUserIconUrl);
                     
                     event.getMessage().delete().queue(); // delete message ( embed content has user signature in footer anyway )
                     event.getChannel().sendMessage(embedBuilder.build()).queue();

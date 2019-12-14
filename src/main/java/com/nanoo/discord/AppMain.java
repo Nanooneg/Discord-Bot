@@ -1,8 +1,8 @@
 package com.nanoo.discord;
 
-import com.nanoo.discord.commands.CalculateCommand;
-import com.nanoo.discord.commands.InviteCommand;
-import com.nanoo.discord.commands.UserInfoCommand;
+import com.jagrosh.jdautilities.command.CommandClient;
+import com.jagrosh.jdautilities.command.CommandClientBuilder;
+import com.nanoo.discord.commands.*;
 import com.nanoo.discord.config.Bot;
 import com.nanoo.discord.events.CategoryCreate;
 import com.nanoo.discord.events.HelloEvent;
@@ -23,8 +23,20 @@ public class AppMain {
         
         /* Bot creation with token given on discord dev dashboard */
         JDA jda = new JDABuilder(Bot.getToken()).build();
+    
+        CommandClientBuilder builder = new CommandClientBuilder();
+        builder.setOwnerId(Bot.getOwnerId());
+        builder.setPrefix("$");
+        builder.setHelpWord("helpme");
+        builder.addCommands(new ServerInfo(),    // give info on server
+                            new Image());        // modify image
+    
+        CommandClient commandClient = builder.build();
         
-        /* Add some Event listener to the bot */
+        jda.addEventListener(commandClient);
+        
+       /*
+        *//* Add some Event listener to the bot *//*
         jda.addEventListener(new HelloEvent(),         // respond to "hello" messages
                              new CategoryCreate(),     // send message on category created event
                              new CalculateCommand(),   // make basic calculation
@@ -32,7 +44,7 @@ public class AppMain {
                              new UserInfoCommand(),    // gives info on some user
                              new CoffeeFilterToggle(), // toggle coffe filter
                              new CoffeeFilter());      // filter for coffee word
-        
+        */
         
     }
     

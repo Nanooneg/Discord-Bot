@@ -13,7 +13,7 @@ import javax.annotation.Nonnull;
 public class CoffeeFilterToggle extends ListenerAdapter {
     
     /* filter toggle status ( true by default ) */
-    public static boolean coffeeFilterOn = true;
+    static boolean coffeeFilterOn = true;
     
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
