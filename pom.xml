@@ -63,6 +63,13 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                    <executable>
+                        <archive>
+                            <manifest>
+                                <mainClass>AppMain</mainClass>
+                            </manifest>
+                        </archive>
+                    </executable>
                 </configuration>
             </plugin>
             <plugin>
