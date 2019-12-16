@@ -4,9 +4,86 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- ============================================================= -->
+    <!--                      Project information                      -->
+    <!-- ============================================================= -->
+
+    <!-- Maven information -->
     <groupId>com.nanoo</groupId>
     <artifactId>discord-bot</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
+    <!-- General information -->
+    <name>discord-bot</name>
+    <description>First bot ever by NanoO</description>
+
+    <!-- ============================================================= -->
+    <!--                           Properties                          -->
+    <!-- ============================================================= -->
+
+    <properties>
+        <jda.version>4.0.0_73</jda.version>
+        <jda-utilities.version>3.0.2</jda-utilities.version>
+    </properties>
+
+    <!-- ============================================================= -->
+    <!--                           Dependencies                        -->
+    <!-- ============================================================= -->
+
+    <dependencies>
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>${jda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jagrosh</groupId>
+            <artifactId>jda-utilities</artifactId>
+            <version>${jda-utilities.version}</version>
+            <scope>compile</scope>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>[0.4, 0.5)</version>
+        </dependency>
+    </dependencies>
+
+    <!-- ============================================================= -->
+    <!--                              Build                            -->
+    <!-- ============================================================= -->
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- ============================================================= -->
+    <!--                          Repositories                         -->
+    <!-- ============================================================= -->
+
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter-bintray</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>bintray</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
 
 </project>
