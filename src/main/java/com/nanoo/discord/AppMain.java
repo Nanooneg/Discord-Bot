@@ -37,7 +37,7 @@ public class AppMain {
         builder.setActivity(Activity.watching("Pandémie : **VirusPorn**"));
         builder.addCommands(new ServerInfo(),                   // give info on server
                             new Image(),                        // modify image
-                            new UserInfo(eventWaiter),                     // give info on user
+                            new UserInfo(eventWaiter),          // give info on user
                             new CoffeeFilterToggle());          // toggle coffee filter
         
         CommandClient commandClient = builder.build();
