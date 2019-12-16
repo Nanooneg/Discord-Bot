@@ -1,5 +1,6 @@
 package com.nanoo.discord.filters;
 
+import com.nanoo.discord.commands.CoffeeFilterToggle;
 import com.nanoo.discord.config.Bot;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -15,7 +16,7 @@ public class CoffeeFilter extends ListenerAdapter {
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
     
-        if (!event.getAuthor().getName().equalsIgnoreCase(Bot.BOT_NAME)){
+        if (!event.getAuthor().getName().equalsIgnoreCase(Bot.getBotName())){
     
             String[] listCoffeeWord = {"café","cafe","caféine","cafeine"};
             String[] messageReceived = event.getMessage().getContentRaw().split(" ");

@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="576693e5-c99d-4f38-950f-1f23ce12f3ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/AppMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/UserInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/UserInfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/ServerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/ServerInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/commands/UserInfoCommand.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/filters/CoffeeFilterToggle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/filters/CoffeeFilterToggle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/config/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/events/HelloEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/events/HelloEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/filters/CoffeeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/filters/CoffeeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nanoo/discord/filters/CoffeeFilterToggle.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +103,8 @@
       <updated>1576087756535</updated>
       <workItem from="1576087758937" duration="31502000" />
       <workItem from="1576161983512" duration="4779000" />
-      <workItem from="1576170693949" duration="9795000" />
+      <workItem from="1576170693949" duration="10514000" />
+      <workItem from="1576488805350" duration="5779000" />
     </task>
     <servers />
   </component>

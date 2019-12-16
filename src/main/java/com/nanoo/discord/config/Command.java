@@ -11,7 +11,5 @@ public class Command {
     
     public static final String COMMAND_CALCULATE = "!calculate";
     public static final String COMMAND_INVITE = "!invite";
-    public static final String COMMAND_USER_INFO = "!info";
-    public static final String COMMAND_TOGGLE_COFFEE_FILTER = "!toggleCoffee";
     
 }

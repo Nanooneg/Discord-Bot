@@ -21,6 +21,7 @@ public class Image extends Command {
         this.arguments = "[width] [height] [imageUrl] [degrees to rotate(optional)]";
         this.aliases = new String[]{"thumbnail"};
         this.help = "Manipulation d'image : donne le lien d'une image et tu peux la redimensionner et/ou la faire tourner";
+        this.category = new Category("Outil");
     }
     
     @Override
@@ -55,7 +56,8 @@ public class Image extends Command {
                     ByteArrayOutputStream os = new ByteArrayOutputStream();
                     Thumbnails.of(imageUrl).forceSize(width,height).rotate(degreeRotation).outputFormat("png").toOutputStream(os);
                     byte[] imageInBytes = os.toByteArray();
-                    
+    
+                    commandEvent.reply(commandEvent.getAuthor().getAsMention() + ", voilà ton image : ");
                     commandEvent.getChannel().sendFile(imageInBytes,"resized.png").queue();
                     
                 }catch (Exception e){
