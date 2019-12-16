@@ -16,17 +16,13 @@ target/
 
 ### IntelliJ IDEA ###
 .idea/
+.idea
+idea/
+idea
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
+### TOKEN ###
+discord-config.properties
 
-### VS Code ###
-.vscode/
