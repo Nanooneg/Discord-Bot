@@ -3,14 +3,12 @@ package com.nanoo.discord;
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
-import com.nanoo.discord.commands.CoffeeFilterToggle;
-import com.nanoo.discord.commands.Image;
-import com.nanoo.discord.commands.ServerInfo;
-import com.nanoo.discord.commands.UserInfo;
+import com.nanoo.discord.commands.*;
 import com.nanoo.discord.config.Bot;
 import com.nanoo.discord.events.CategoryCreate;
 import com.nanoo.discord.events.HelloEvent;
 import com.nanoo.discord.filters.CoffeeFilter;
+import com.nanoo.discord.filters.NameFilter;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 
@@ -36,7 +34,8 @@ public class AppMain {
         builder.addCommands(new ServerInfo(),                   // give info on server
                             new Image(),                        // modify image
                             new UserInfo(eventWaiter),          // give info on user
-                            new CoffeeFilterToggle());          // toggle coffee filter
+                            new CoffeeFilterToggle(),           // toggle coffee filter
+                            new NameFilterToggle());            // toggle name filter
         
         CommandClient commandClient = builder.build();
         
@@ -44,6 +43,7 @@ public class AppMain {
                             new HelloEvent(),         // respond to "hello" messages
                             new CategoryCreate(),     // send message on category created event
                             new CoffeeFilter(),       // filter for coffee word
+                            new NameFilter(),         // filter for bot name
                             eventWaiter               // event waiter
                             );
         
