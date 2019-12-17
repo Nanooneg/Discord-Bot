@@ -23,7 +23,7 @@ public class HelloEvent extends ListenerAdapter {
         String[] messageReceived = event.getMessage().getContentRaw().split(" ");
         String messageReceivedAuthor = event.getAuthor().getName();
         
-        if (!messageReceivedAuthor.equalsIgnoreCase(Bot.nameValue)){
+        if (!messageReceivedAuthor.equalsIgnoreCase(Bot.getNameValue())){
             for (String s : messageReceived) {
                 if (s.equalsIgnoreCase("hello")) {
                     event.getChannel().sendMessage("Hi there ! La forme " + messageReceivedAuthor + " ? :)").queue();
