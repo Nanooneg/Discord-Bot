@@ -26,14 +26,12 @@ public class AppMain {
     public static void main(String[] args) throws LoginException {
         
         /* Bot creation with token given on discord dev dashboard */
-        //JDA jda = new JDABuilder(Bot.getToken()).build();
-        JDA jda = new JDABuilder(System.getenv("token")).build();
+        JDA jda = new JDABuilder(Bot.tokenValue).build();
     
         EventWaiter eventWaiter = new EventWaiter();
         
         CommandClientBuilder builder = new CommandClientBuilder();
-        //builder.setOwnerId(Bot.getOwnerId());
-        builder.setOwnerId(System.getenv("ownerId"));
+        builder.setOwnerId(Bot.ownerIdValue);
         builder.setPrefix("$");
         builder.setHelpWord("helpme");
         builder.setActivity(Activity.watching("Pandémie : **VirusPorn**"));

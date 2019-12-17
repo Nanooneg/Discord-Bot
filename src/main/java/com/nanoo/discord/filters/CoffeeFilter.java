@@ -16,7 +16,7 @@ public class CoffeeFilter extends ListenerAdapter {
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
     
-        if (!event.getAuthor().getName().equalsIgnoreCase(Bot.getBotName())){
+        if (!event.getAuthor().getName().equalsIgnoreCase(Bot.nameValue)){
     
             String[] listCoffeeWord = {"café","cafe","caféine","cafeine"};
             String[] messageReceived = event.getMessage().getContentRaw().split(" ");
