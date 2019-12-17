@@ -8,14 +8,39 @@ import java.util.ResourceBundle;
  */
 public class Bot {
     
-    private static final String CONFIG_FILE_NAME = "discord-config";
+    private static final String CONFIG_FILE_NAME = "discord-config.properties";
+    private static final String TOKEN_KEY = "token";
+    private static final String OWNER_ID_KEY = "ownerId";
+    private static final String NAME_KEY = "name";
     
     private Bot() {}
     
-    /* Get token in properties file */
-    public static String getToken() { return ResourceBundle.getBundle(CONFIG_FILE_NAME).getString("token"); }
-    public static String getOwnerId() { return ResourceBundle.getBundle(CONFIG_FILE_NAME).getString("ownerId"); }
-    public static String getBotName() { return ResourceBundle.getBundle(CONFIG_FILE_NAME).getString("name"); }
+    public static String tokenValue = setTokenValue();
+    public static String ownerIdValue = setOwnerIdValue();
+    public static String nameValue = setNameValue();
     
+    private static String setTokenValue() {
+        if (ResourceBundle.getBundle(CONFIG_FILE_NAME).containsKey(TOKEN_KEY)) {
+            return ResourceBundle.getBundle(CONFIG_FILE_NAME).getString(TOKEN_KEY);
+        }else {
+            return System.getenv(TOKEN_KEY);
+        }
+    }
+    
+    private static String setOwnerIdValue() {
+        if (ResourceBundle.getBundle(CONFIG_FILE_NAME).containsKey(OWNER_ID_KEY)) {
+            return ResourceBundle.getBundle(CONFIG_FILE_NAME).getString(OWNER_ID_KEY);
+        }else {
+            return System.getenv(OWNER_ID_KEY);
+        }
+    }
+    
+    private static String setNameValue() {
+        if (ResourceBundle.getBundle(CONFIG_FILE_NAME).containsKey(NAME_KEY)) {
+            return ResourceBundle.getBundle(CONFIG_FILE_NAME).getString(NAME_KEY);
+        }else {
+            return System.getenv(NAME_KEY);
+        }
+    }
     
 }
