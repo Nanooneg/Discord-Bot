@@ -1,5 +1,7 @@
 package com.nanoo.discord.config;
 
+import net.dv8tion.jda.api.entities.Activity;
+
 import java.util.ResourceBundle;
 
 /**
@@ -12,6 +14,7 @@ public class Bot {
     private static final String TOKEN_KEY = "token";
     private static final String OWNER_ID_KEY = "ownerId";
     private static final String NAME_KEY = "name";
+    private static final String ACTIVITY_KEY = "activity";
     
     private Bot() {}
     
@@ -36,6 +39,15 @@ public class Bot {
             return System.getenv(NAME_KEY);
         } else {
             return ResourceBundle.getBundle(CONFIG_FILE_NAME).getString(NAME_KEY);
+        }
+    }
+    
+    public static Activity getActivityValue() {
+        if (System.getenv(ACTIVITY_KEY) != null){
+            return Activity.watching(System.getenv(ACTIVITY_KEY));
+        } else {
+            /*String activity = ResourceBundle.getBundle(CONFIG_FILE_NAME).getString(ACTIVITY_KEY);*/
+            return Activity.watching("ses lignes de code");
         }
     }
     

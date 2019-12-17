@@ -13,7 +13,6 @@ import com.nanoo.discord.events.HelloEvent;
 import com.nanoo.discord.filters.CoffeeFilter;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Activity;
 
 import javax.security.auth.login.LoginException;
 
@@ -33,7 +32,7 @@ public class AppMain {
         builder.setOwnerId(Bot.getOwnerIdValue());
         builder.setPrefix("$");
         builder.setHelpWord("helpme");
-        builder.setActivity(Activity.watching("Pandémie : **VirusPorn**"));
+        builder.setActivity(Bot.getActivityValue());
         builder.addCommands(new ServerInfo(),                   // give info on server
                             new Image(),                        // modify image
                             new UserInfo(eventWaiter),          // give info on user
