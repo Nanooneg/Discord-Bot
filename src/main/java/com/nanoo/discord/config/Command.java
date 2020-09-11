@@ -9,6 +9,6 @@ public class Command {
     private Command() {
     }
     
-    public static final String COMMAND_INVITE = "!invite";
+    public static final String COMMAND_INVITE = "$invite";
     
 }

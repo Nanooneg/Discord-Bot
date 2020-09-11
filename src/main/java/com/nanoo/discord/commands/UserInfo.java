@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class UserInfo extends Command {
     
-    private EventWaiter eventWaiter;
+    private final EventWaiter eventWaiter;
     
     public UserInfo(EventWaiter eventWaiter) {
         this.name = "user-info";
