@@ -37,7 +37,7 @@ public class UserInfo extends Command {
     @Override
     protected void execute(CommandEvent commandEvent) {
         
-        commandEvent.reply("Ok petite fouine ! donne moi le nom d'un utilisateur sous cette forme ! @user");
+        commandEvent.reply("Ok petite fouine ! donne moi le nom d'un utilisateur sous cette forme : @user");
         eventWaiter.waitForEvent(GuildMessageReceivedEvent.class,
                 e -> e.getAuthor().equals(commandEvent.getAuthor()) && e.getChannel().equals(commandEvent.getChannel()) ,
                 e -> {

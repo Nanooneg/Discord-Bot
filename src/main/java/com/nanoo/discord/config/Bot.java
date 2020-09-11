@@ -46,8 +46,7 @@ public class Bot {
         if (System.getenv(ACTIVITY_KEY) != null){
             return Activity.watching(System.getenv(ACTIVITY_KEY));
         } else {
-            /*String activity = ResourceBundle.getBundle(CONFIG_FILE_NAME).getString(ACTIVITY_KEY);*/
-            return Activity.watching("ses lignes de code");
+            return Activity.watching(ResourceBundle.getBundle(CONFIG_FILE_NAME).getString(ACTIVITY_KEY));
         }
     }
     

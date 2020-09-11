@@ -17,7 +17,7 @@ import java.util.Objects;
 public class ServerInfo extends Command {
     
     public ServerInfo() {
-        this.name = "serverinfo";
+        this.name = "server-info";
         this.aliases = new String[]{"server"};
         this.help = "Informations sur le server";
         this.category = new Category("Info");
@@ -33,8 +33,8 @@ public class ServerInfo extends Command {
         String requestUserIconUrl = commandEvent.getAuthor().getAvatarUrl();
     
         String embedTitle = "Informations sur le server";
-        String embedThumbnailUrl = "https://banner2.cleanpng.com/20180319/ebq/kisspng-configuration-management-computer-icons-symbol-bus-gear-download-icon-5ab05383f3a0e4.5304297115215051559979.jpg";
-        
+        String embedThumbnailUrl = commandEvent.getGuild().getIconUrl();
+
         Map<String,String> fields = getServerInfos(commandEvent);
         
         EmbedBuilder embedBuilder = builderUtils.buildAndFillFields(fields);

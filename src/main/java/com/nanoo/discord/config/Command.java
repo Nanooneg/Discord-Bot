@@ -9,7 +9,6 @@ public class Command {
     private Command() {
     }
     
-    public static final String COMMAND_CALCULATE = "!calculate";
     public static final String COMMAND_INVITE = "!invite";
     
 }

@@ -26,7 +26,7 @@ public class InviteCommand extends ListenerAdapter {
             if (messageReceived.length == 1){
                 event.getChannel().sendMessage(messageExplication).queue();
             }else if (messageReceived.length == 2 && messageReceived[1].equalsIgnoreCase("create")){
-                event.getChannel().sendMessage("Voilà ton lien pour inviter ton pote : " +
+                event.getChannel().sendMessage("Voilà le lien d'invitation : " +
                         event.getChannel().createInvite().complete().getUrl()).queue();
             }else {
                 event.getChannel().sendMessage(messageError).queue();

@@ -32,26 +32,23 @@ public class AppMain {
         builder.setHelpWord("helpme");
         builder.setActivity(Bot.getActivityValue());
         builder.addCommands(new ServerInfo(),                   // give info on server
-                            new Image(),                        // modify image
                             new UserInfo(eventWaiter),          // give info on user
-                            new CoffeeFilterToggle(),           // toggle coffee filter
+                            // new CoffeeFilterToggle(),           // toggle coffee filter
                             new NameFilterToggle());            // toggle name filter
         
         CommandClient commandClient = builder.build();
         
         jda.addEventListener(commandClient,
                             new HelloEvent(),         // respond to "hello" messages
-                            new CategoryCreate(),     // send message on category created event
-                            new CoffeeFilter(),       // filter for coffee word
+                            // new CategoryCreate(),     // send message on category created event
+                            // new CoffeeFilter(),       // filter for coffee word
                             new NameFilter(),         // filter for bot name
+                            new InviteCommand(),      // create invitation to server
                             eventWaiter               // event waiter
                             );
-        
-       
-        /* TODO make commands
-        CalculateCommand(),   // make basic calculation
-        InviteCommand(),      // create invitation to server */
-        
+
+
+
     }
     
 }

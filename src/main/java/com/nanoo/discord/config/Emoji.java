@@ -9,6 +9,6 @@ public class Emoji {
     private Emoji (){
     }
     
-    public static final String VIRUS_EMOJI = "virus:656448951347838977";
+    public static final String LUCKBOT_EMOJI = "luck:753901009889394721";
     
 }

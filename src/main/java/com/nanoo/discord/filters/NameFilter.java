@@ -1,6 +1,5 @@
 package com.nanoo.discord.filters;
 
-import com.nanoo.discord.commands.CoffeeFilterToggle;
 import com.nanoo.discord.commands.NameFilterToggle;
 import com.nanoo.discord.config.Bot;
 import com.nanoo.discord.config.Emoji;
@@ -26,7 +25,7 @@ public class NameFilter extends ListenerAdapter {
                 for (String messageWord : messageReceived) {
                     if (messageWord.equalsIgnoreCase(Bot.getNameValue())) {
                         
-                        event.getMessage().addReaction(Emoji.VIRUS_EMOJI).queue();
+                        event.getMessage().addReaction(Emoji.LUCKBOT_EMOJI).queue();
                         
                     }
                 }
